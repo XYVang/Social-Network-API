@@ -8,6 +8,8 @@ module.exports = {
       .then((users) => res.json(users))
       .catch((err) => res.status(500).json(err));
   },
+
+  // User Controller Functions
   getUserById(req, res) {
     User.findById(req.params.userId)
       .populate('thoughts')
