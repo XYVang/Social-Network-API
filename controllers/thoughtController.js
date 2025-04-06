@@ -7,6 +7,7 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
   
+  // Thought Controller Functions
   getThoughtById(req, res) {
     Thought.findById(req.params.thoughtId)
       .then((thought) => thought ? res.json(thought) : res.status(404).json({ message: 'No thought found' }))

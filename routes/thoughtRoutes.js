@@ -1,4 +1,6 @@
 const router = require('express').Router();
+
+// API Routes which connect them to thought controller
 const {
   getThoughts,
   getThoughtById,
